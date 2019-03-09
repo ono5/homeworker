@@ -93,3 +93,1909 @@ Python auto-reloader enabled
 [pid: 6|app: 0|req: 1/1] 172.21.0.1 () {42 vars in 1073 bytes} [Sat Mar  9 12:46:04 2019] GET / => generated 16559 bytes in 205 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
 Not Found: /favicon.ico
 [pid: 6|app: 0|req: 2/2] 172.21.0.1 () {42 vars in 1052 bytes} [Sat Mar  9 12:46:04 2019] GET /favicon.ico => generated 1976 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 6)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:05:09 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5576f5a5e5c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+Traceback (most recent call last):
+  File "./homeworker/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/lib/python3.6/site-packages/django/apps/registry.py", line 89, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/lib/python3.6/site-packages/django/apps/config.py", line 116, in create
+    mod = import_module(mod_path)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ModuleNotFoundError: No module named 'account.apps.AccountConfigdjango'; 'account.apps' is not a package
+unable to load app 0 (mountpoint='') (callable not found or import error)
+Traceback (most recent call last):
+  File "/app/homeworker/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/lib/python3.6/site-packages/django/apps/registry.py", line 81, in populate
+    raise RuntimeError("populate() isn't reentrant")
+RuntimeError: populate() isn't reentrant
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+Python auto-reloader enabled
+--- no python application found, check your startup logs for errors ---
+[pid: 8|app: -1|req: -1/1] 172.21.0.1 () {42 vars in 1073 bytes} [Sat Mar  9 13:15:48 2019] GET / => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8|app: -1|req: -1/2] 172.21.0.1 () {42 vars in 1073 bytes} [Sat Mar  9 13:15:59 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8|app: -1|req: -1/3] 172.21.0.1 () {42 vars in 1083 bytes} [Sat Mar  9 13:17:02 2019] GET /login => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:18:56 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5622985635c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5622985635c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 10, cores: 1)
+Python auto-reloader enabled
+Not Found: /login
+[pid: 10|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 1114 bytes} [Sat Mar  9 13:18:58 2019] GET /login => generated 2066 bytes in 84 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 10|app: 0|req: 2/2] 172.21.0.1 () {42 vars in 1073 bytes} [Sat Mar  9 13:19:01 2019] GET / => generated 2033 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 538, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.6/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/usr/lib/python3.6/site-packages/django/middleware/common.py", line 60, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/lib/python3.6/site-packages/django/middleware/common.py", line 79, in should_redirect_with_slash
+    is_valid_path('%s/' % request.path_info, urlconf)
+  File "/usr/lib/python3.6/site-packages/django/urls/base.py", line 155, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/lib/python3.6/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 496, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 494, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 545, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name))
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'account.urls' from './account/urls.py'>' does not appear to have any patterns in it. If you see valid patterns in the file then the issue is probably caused by a circular import.
+[pid: 10|app: 0|req: 3/3] 172.21.0.1 () {42 vars in 1087 bytes} [Sat Mar  9 13:19:08 2019] GET /account => generated 88454 bytes in 52 msecs (HTTP/1.1 500) 1 headers in 63 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 10)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:20:12 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x561fc883e5c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x561fc883e5c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 12, cores: 1)
+Python auto-reloader enabled
+Not Found: /
+[pid: 12|app: 0|req: 1/1] 172.21.0.1 () {42 vars in 1073 bytes} [Sat Mar  9 13:21:22 2019] GET / => generated 2033 bytes in 69 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 538, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 241, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/django/contrib/admin/sites.py", line 213, in inner
+    if request.path == reverse('admin:logout', current_app=self.name):
+  File "/usr/lib/python3.6/site-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 433, in _populate
+    url_pattern._populate()
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 416, in _populate
+    for url_pattern in reversed(self.url_patterns):
+  File "/usr/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 545, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name))
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'account.urls' from './account/urls.py'>' does not appear to have any patterns in it. If you see valid patterns in the file then the issue is probably caused by a circular import.
+[pid: 12|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1109 bytes} [Sat Mar  9 13:21:25 2019] GET /admin/ => generated 107698 bytes in 75 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 538, in url_patterns
+    iter(patterns)
+TypeError: 'module' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.6/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/usr/lib/python3.6/site-packages/django/middleware/common.py", line 60, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/lib/python3.6/site-packages/django/middleware/common.py", line 79, in should_redirect_with_slash
+    is_valid_path('%s/' % request.path_info, urlconf)
+  File "/usr/lib/python3.6/site-packages/django/urls/base.py", line 155, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/lib/python3.6/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 496, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 494, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 545, in url_patterns
+    raise ImproperlyConfigured(msg.format(name=self.urlconf_name))
+django.core.exceptions.ImproperlyConfigured: The included URLconf '<module 'account.urls' from './account/urls.py'>' does not appear to have any patterns in it. If you see valid patterns in the file then the issue is probably caused by a circular import.
+[pid: 12|app: 0|req: 3/3] 172.21.0.1 () {42 vars in 1087 bytes} [Sat Mar  9 13:21:32 2019] GET /account => generated 88454 bytes in 62 msecs (HTTP/1.1 500) 1 headers in 63 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./account/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 12)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:24:13 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55ad1bca35c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55ad1bca35c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 14, cores: 1)
+Python auto-reloader enabled
+Not Found: /account
+[pid: 14|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 1118 bytes} [Sat Mar  9 13:24:14 2019] GET /account => generated 2072 bytes in 51 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /account/
+[pid: 14|app: 0|req: 2/2] 172.21.0.1 () {42 vars in 1089 bytes} [Sat Mar  9 13:24:23 2019] GET /account/ => generated 2142 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /account/
+[pid: 14|app: 0|req: 3/3] 172.21.0.1 () {44 vars in 1120 bytes} [Sat Mar  9 13:24:31 2019] GET /account/ => generated 2142 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 14|app: 0|req: 4/4] 172.21.0.1 () {42 vars in 1101 bytes} [Sat Mar  9 13:24:35 2019] GET /account/login/ => generated 821 bytes in 39 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 14|app: 0|req: 5/5] 172.21.0.1 () {52 vars in 1337 bytes} [Sat Mar  9 13:24:44 2019] POST /account/login/ => generated 13 bytes in 168 msecs (HTTP/1.1 200) 3 headers in 108 bytes (1 switches on core 0)
+[pid: 14|app: 0|req: 6/6] 172.21.0.1 () {42 vars in 1101 bytes} [Sat Mar  9 13:24:47 2019] GET /account/login/ => generated 821 bytes in 18 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 14|app: 0|req: 7/7] 172.21.0.1 () {52 vars in 1337 bytes} [Sat Mar  9 13:25:59 2019] POST /account/login/ => generated 26 bytes in 137 msecs (HTTP/1.1 200) 6 headers in 407 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./account/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 14)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:32:33 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55f5f431c5c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f5f431c5c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 16, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 16)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:35:05 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55edabe965c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55edabe965c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 18, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 18)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:35:22 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55a77e4865c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55a77e4865c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 20, cores: 1)
+Python auto-reloader enabled
+Internal Server Error: /account/login/
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 494, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 536, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/lib/python3.6/site-packages/django/utils/functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 529, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./homeworker/urls.py", line 21, in <module>
+    path('account/', include('account.urls')),
+  File "/usr/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./account/urls.py", line 2, in <module>
+    from django.contrib.auth import view as auth_views
+ImportError: cannot import name 'view'
+[pid: 20|app: 0|req: 1/1] 172.21.0.1 () {42 vars in 1145 bytes} [Sat Mar  9 13:35:24 2019] GET /account/login/ => generated 136424 bytes in 153 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Internal Server Error: /account/login/
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/base.py", line 158, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/base.py", line 156, in _get_response
+    response = response.render()
+  File "/usr/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/usr/lib/python3.6/site-packages/django/template/response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3.6/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3.6/site-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3.6/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3.6/site-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3.6/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3.6/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3.6/site-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3.6/site-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3.6/site-packages/django/urls/resolvers.py", line 632, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'logout' not found. 'logout' is not a valid view function or pattern name.
+[pid: 20|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1176 bytes} [Sat Mar  9 13:36:01 2019] GET /account/login/ => generated 140572 bytes in 143 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./account/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 20)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:36:20 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55e1cca445c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55e1cca445c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 22, cores: 1)
+Python auto-reloader enabled
+[pid: 22|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 1176 bytes} [Sat Mar  9 13:36:28 2019] GET /account/login/ => generated 1754 bytes in 118 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 22|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1199 bytes} [Sat Mar  9 13:36:32 2019] GET /account/logout/ => generated 1754 bytes in 43 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 22|app: 0|req: 3/3] 172.21.0.1 () {52 vars in 1382 bytes} [Sat Mar  9 13:36:38 2019] POST /account/login/ => generated 0 bytes in 87 msecs (HTTP/1.1 302) 9 headers in 533 bytes (1 switches on core 0)
+Internal Server Error: /account/
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "./account/views.py", line 35, in dashboard
+    {'section': 'dashboard'})
+  File "/usr/lib/python3.6/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: account/dashborad.html
+[pid: 22|app: 0|req: 4/4] 172.21.0.1 () {46 vars in 1217 bytes} [Sat Mar  9 13:36:38 2019] GET /account/ => generated 78294 bytes in 54 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./account/views.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 22)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:37:21 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x560858c7b5c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x560858c7b5c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 24, cores: 1)
+Python auto-reloader enabled
+[pid: 24|app: 0|req: 1/1] 172.21.0.1 () {46 vars in 1217 bytes} [Sat Mar  9 13:37:23 2019] GET /account/ => generated 904 bytes in 103 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 24|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1193 bytes} [Sat Mar  9 13:37:29 2019] GET /account/logout/ => generated 1754 bytes in 32 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 24)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:38:46 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55da5adf4600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55da5adf4600 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 26, cores: 1)
+Python auto-reloader enabled
+Not Found: /
+[pid: 26|app: 0|req: 1/1] 172.21.0.1 () {42 vars in 1117 bytes} [Sat Mar  9 13:38:54 2019] GET / => generated 2033 bytes in 66 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 26)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:39:34 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55dfb7108600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55dfb7108600 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 28, cores: 1)
+Python auto-reloader enabled
+[pid: 28|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 1148 bytes} [Sat Mar  9 13:39:35 2019] GET / => generated 888 bytes in 100 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 28|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1148 bytes} [Sat Mar  9 13:39:35 2019] GET / => generated 888 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 28|app: 0|req: 3/3] 172.21.0.1 () {44 vars in 1169 bytes} [Sat Mar  9 13:39:38 2019] GET /logout/ => generated 1730 bytes in 41 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 28|app: 0|req: 4/4] 172.21.0.1 () {42 vars in 1117 bytes} [Sat Mar  9 13:39:41 2019] GET / => generated 888 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 28)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:39:49 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x556f030c2600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x556f030c2600 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 30, cores: 1)
+Python auto-reloader enabled
+Not Found: /
+[pid: 30|app: 0|req: 1/1] 172.21.0.1 () {42 vars in 1117 bytes} [Sat Mar  9 13:39:56 2019] GET / => generated 2033 bytes in 68 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 30)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:40:25 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55b0d5a0d600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55b0d5a0d600 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 32, cores: 1)
+Python auto-reloader enabled
+Not Found: /
+[pid: 32|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 1148 bytes} [Sat Mar  9 13:40:26 2019] GET / => generated 2033 bytes in 71 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 32|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1148 bytes} [Sat Mar  9 13:40:26 2019] GET / => generated 2033 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 32|app: 0|req: 3/3] 172.21.0.1 () {44 vars in 1148 bytes} [Sat Mar  9 13:40:27 2019] GET / => generated 2033 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 32|app: 0|req: 4/4] 172.21.0.1 () {44 vars in 1148 bytes} [Sat Mar  9 13:40:27 2019] GET / => generated 2033 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 32|app: 0|req: 5/5] 172.21.0.1 () {44 vars in 1148 bytes} [Sat Mar  9 13:40:27 2019] GET / => generated 2033 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 32)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:40:32 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55c194401600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c194401600 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 34, cores: 1)
+Python auto-reloader enabled
+[pid: 34|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 1148 bytes} [Sat Mar  9 13:40:54 2019] GET / => generated 888 bytes in 117 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1169 bytes} [Sat Mar  9 13:40:56 2019] GET /logout/ => generated 1730 bytes in 35 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 3/3] 172.21.0.1 () {42 vars in 1117 bytes} [Sat Mar  9 13:40:58 2019] GET / => generated 888 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 34)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:41:51 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x56099788a600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56099788a600 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 36, cores: 1)
+Python auto-reloader enabled
+[pid: 36|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 1148 bytes} [Sat Mar  9 13:41:53 2019] GET / => generated 888 bytes in 90 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 36|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1169 bytes} [Sat Mar  9 13:41:58 2019] GET /logout/ => generated 1730 bytes in 33 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 36|app: 0|req: 3/3] 172.21.0.1 () {46 vars in 1200 bytes} [Sat Mar  9 13:41:59 2019] GET /logout/ => generated 1730 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 36|app: 0|req: 4/4] 172.21.0.1 () {46 vars in 1200 bytes} [Sat Mar  9 13:42:00 2019] GET /logout/ => generated 1730 bytes in 31 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 36|app: 0|req: 5/5] 172.21.0.1 () {46 vars in 1200 bytes} [Sat Mar  9 13:42:00 2019] GET /logout/ => generated 1730 bytes in 25 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 36|app: 0|req: 6/6] 172.21.0.1 () {42 vars in 1117 bytes} [Sat Mar  9 13:42:05 2019] GET / => generated 888 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+Not Found: /account
+[pid: 36|app: 0|req: 7/7] 172.21.0.1 () {42 vars in 1131 bytes} [Sat Mar  9 13:42:15 2019] GET /account => generated 2465 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 36|app: 0|req: 8/8] 172.21.0.1 () {42 vars in 1117 bytes} [Sat Mar  9 13:42:22 2019] GET / => generated 888 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 36)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:42:54 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55dd987bf600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55dd987bf600 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 38, cores: 1)
+Python auto-reloader enabled
+[pid: 38|app: 0|req: 1/1] 172.21.0.1 () {42 vars in 1131 bytes} [Sat Mar  9 13:42:57 2019] GET /account => generated 0 bytes in 68 msecs (HTTP/1.1 301) 3 headers in 114 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 2/2] 172.21.0.1 () {42 vars in 1133 bytes} [Sat Mar  9 13:42:57 2019] GET /account/ => generated 904 bytes in 43 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 3/3] 172.21.0.1 () {44 vars in 1193 bytes} [Sat Mar  9 13:42:59 2019] GET /account/logout/ => generated 1754 bytes in 38 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+Not Found: /
+[pid: 38|app: 0|req: 4/4] 172.21.0.1 () {42 vars in 1117 bytes} [Sat Mar  9 13:43:04 2019] GET / => generated 2033 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 5/5] 172.21.0.1 () {42 vars in 1133 bytes} [Sat Mar  9 13:43:09 2019] GET /account/ => generated 904 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 6/6] 172.21.0.1 () {44 vars in 1193 bytes} [Sat Mar  9 13:43:11 2019] GET /account/logout/ => generated 1754 bytes in 40 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 7/7] 172.21.0.1 () {42 vars in 1133 bytes} [Sat Mar  9 13:43:14 2019] GET /account/ => generated 904 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 8/8] 172.21.0.1 () {44 vars in 1193 bytes} [Sat Mar  9 13:44:14 2019] GET /account/logout/ => generated 1754 bytes in 40 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 9/9] 172.21.0.1 () {52 vars in 1382 bytes} [Sat Mar  9 13:44:17 2019] POST /account/login/ => generated 1954 bytes in 98 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 10/10] 172.21.0.1 () {52 vars in 1381 bytes} [Sat Mar  9 13:44:20 2019] POST /account/login/ => generated 0 bytes in 87 msecs (HTTP/1.1 302) 9 headers in 533 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 11/11] 172.21.0.1 () {46 vars in 1216 bytes} [Sat Mar  9 13:44:20 2019] GET /account/ => generated 904 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 38|app: 0|req: 12/12] 172.21.0.1 () {44 vars in 1193 bytes} [Sat Mar  9 13:44:23 2019] GET /account/logout/ => generated 1754 bytes in 30 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 38)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:45:02 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5599cb2bb600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5599cb2bb600 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 40, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 40)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:45:07 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x559b76704600
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x559b76704600 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 42, cores: 1)
+Python auto-reloader enabled
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:45:51 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55a9b3788620
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55a9b3788620 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 7, cores: 1)
+Python auto-reloader enabled
+[pid: 7|app: 0|req: 1/1] 172.21.0.1 () {46 vars in 1224 bytes} [Sat Mar  9 13:46:10 2019] GET /account/logout/ => generated 1754 bytes in 2512 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1157 bytes} [Sat Mar  9 13:46:15 2019] GET /account/ => generated 904 bytes in 98 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+Not Found: /
+[pid: 7|app: 0|req: 3/3] 172.21.0.1 () {42 vars in 1117 bytes} [Sat Mar  9 13:46:59 2019] GET / => generated 2033 bytes in 25 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 4/4] 172.21.0.1 () {44 vars in 1153 bytes} [Sat Mar  9 13:47:02 2019] GET /admin/ => generated 2984 bytes in 104 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 5/5] 172.21.0.1 () {42 vars in 1129 bytes} [Sat Mar  9 13:47:02 2019] GET /admin/ => generated 2984 bytes in 30 msecs (HTTP/1.1 200) 6 headers in 227 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 6/6] 172.21.0.1 () {44 vars in 1193 bytes} [Sat Mar  9 13:47:04 2019] GET /admin/auth/user/ => generated 6654 bytes in 68 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 7/7] 172.21.0.1 () {42 vars in 1080 bytes} [Sat Mar  9 13:47:04 2019] GET /admin/jsi18n/ => generated 3185 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 8/8] 172.21.0.1 () {44 vars in 1221 bytes} [Sat Mar  9 13:47:06 2019] GET /admin/auth/user/1/change/ => generated 13607 bytes in 171 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 9/9] 172.21.0.1 () {42 vars in 1089 bytes} [Sat Mar  9 13:47:07 2019] GET /admin/jsi18n/ => generated 3185 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 10/10] 172.21.0.1 () {52 vars in 1486 bytes} [Sat Mar  9 13:47:14 2019] POST /admin/auth/user/1/change/ => generated 0 bytes in 55 msecs (HTTP/1.1 302) 8 headers in 477 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 11/11] 172.21.0.1 () {46 vars in 1433 bytes} [Sat Mar  9 13:47:14 2019] GET /admin/auth/user/ => generated 6827 bytes in 49 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 12/12] 172.21.0.1 () {42 vars in 1080 bytes} [Sat Mar  9 13:47:14 2019] GET /admin/jsi18n/ => generated 3185 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 13/13] 172.21.0.1 () {44 vars in 1164 bytes} [Sat Mar  9 13:47:18 2019] GET /account/ => generated 910 bytes in 31 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 14/14] 172.21.0.1 () {44 vars in 1193 bytes} [Sat Mar  9 13:47:20 2019] GET /account/logout/ => generated 1760 bytes in 31 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 15/15] 172.21.0.1 () {44 vars in 1200 bytes} [Sat Mar  9 13:47:48 2019] GET /account/logout/ => generated 1760 bytes in 102 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 16/16] 172.21.0.1 () {44 vars in 1200 bytes} [Sat Mar  9 13:47:49 2019] GET /account/logout/ => generated 1760 bytes in 27 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 17/17] 172.21.0.1 () {44 vars in 1200 bytes} [Sat Mar  9 13:47:49 2019] GET /account/logout/ => generated 1760 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 18/18] 172.21.0.1 () {44 vars in 1200 bytes} [Sat Mar  9 13:47:49 2019] GET /account/logout/ => generated 1760 bytes in 30 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 19/19] 172.21.0.1 () {44 vars in 1157 bytes} [Sat Mar  9 13:47:53 2019] GET /account/ => generated 910 bytes in 49 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 7|app: 0|req: 20/20] 172.21.0.1 () {44 vars in 1193 bytes} [Sat Mar  9 13:47:56 2019] GET /account/logout/ => generated 1760 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./account/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 7)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:49:11 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55ba076275c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55ba076275c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 9, cores: 1)
+Python auto-reloader enabled
+[pid: 9|app: 0|req: 1/1] 172.21.0.1 () {46 vars in 1224 bytes} [Sat Mar  9 13:49:13 2019] GET /account/logout/ => generated 0 bytes in 80 msecs (HTTP/1.1 302) 7 headers in 325 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 2/2] 172.21.0.1 () {46 vars in 1178 bytes} [Sat Mar  9 13:49:14 2019] GET /account/login/ => generated 1394 bytes in 34 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 3/3] 172.21.0.1 () {52 vars in 1337 bytes} [Sat Mar  9 13:49:16 2019] POST /account/login/ => generated 1594 bytes in 160 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 4/4] 172.21.0.1 () {44 vars in 1113 bytes} [Sat Mar  9 13:49:19 2019] GET /account/ => generated 0 bytes in 2 msecs (HTTP/1.1 302) 5 headers in 166 bytes (1 switches on core 0)
+[pid: 9|app: 0|req: 5/5] 172.21.0.1 () {44 vars in 1154 bytes} [Sat Mar  9 13:49:19 2019] GET /account/login/?next=/account/ => generated 1403 bytes in 20 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+Not Found: /
+[pid: 9|app: 0|req: 6/6] 172.21.0.1 () {42 vars in 1073 bytes} [Sat Mar  9 13:49:20 2019] GET / => generated 2033 bytes in 11 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 9)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:49:30 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55aebadf75c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55aebadf75c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 11, cores: 1)
+Python auto-reloader enabled
+[pid: 11|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 1104 bytes} [Sat Mar  9 13:49:32 2019] GET / => generated 0 bytes in 67 msecs (HTTP/1.1 302) 5 headers in 150 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 1129 bytes} [Sat Mar  9 13:49:32 2019] GET /login/?next=/ => generated 1379 bytes in 29 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 3/3] 172.21.0.1 () {52 vars in 1320 bytes} [Sat Mar  9 13:49:38 2019] POST /login/ => generated 0 bytes in 101 msecs (HTTP/1.1 302) 9 headers in 525 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 4/4] 172.21.0.1 () {46 vars in 1199 bytes} [Sat Mar  9 13:49:38 2019] GET / => generated 894 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 5/5] 172.21.0.1 () {44 vars in 1169 bytes} [Sat Mar  9 13:49:40 2019] GET /logout/ => generated 0 bytes in 13 msecs (HTTP/1.1 302) 7 headers in 317 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 6/6] 172.21.0.1 () {44 vars in 1123 bytes} [Sat Mar  9 13:49:40 2019] GET /login/ => generated 1378 bytes in 31 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./account/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 11)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:53:01 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55fa58ca95c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55fa58ca95c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 13, cores: 1)
+Python auto-reloader enabled
+Not Found: /account/
+[pid: 13|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 1113 bytes} [Sat Mar  9 13:53:09 2019] GET /account/ => generated 2852 bytes in 65 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /account/password_change
+[pid: 13|app: 0|req: 2/2] 172.21.0.1 () {42 vars in 1119 bytes} [Sat Mar  9 13:53:12 2019] GET /account/password_change => generated 2897 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /account/password_change/
+[pid: 13|app: 0|req: 3/3] 172.21.0.1 () {42 vars in 1121 bytes} [Sat Mar  9 13:53:23 2019] GET /account/password_change/ => generated 2900 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./account/urls.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 13)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:54:45 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55663d9325c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55663d9325c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 15, cores: 1)
+Python auto-reloader enabled
+Not Found: /account/password_change
+[pid: 15|app: 0|req: 1/1] 172.21.0.1 () {42 vars in 1119 bytes} [Sat Mar  9 13:54:55 2019] GET /account/password_change => generated 2897 bytes in 152 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /account/password_change/
+[pid: 15|app: 0|req: 2/2] 172.21.0.1 () {42 vars in 1121 bytes} [Sat Mar  9 13:54:59 2019] GET /account/password_change/ => generated 2900 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 3/3] 172.21.0.1 () {42 vars in 1105 bytes} [Sat Mar  9 13:55:16 2019] GET /password_change/ => generated 0 bytes in 9 msecs (HTTP/1.1 302) 5 headers in 166 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 4/4] 172.21.0.1 () {42 vars in 1130 bytes} [Sat Mar  9 13:55:16 2019] GET /login/?next=/password_change/ => generated 1395 bytes in 50 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 5/5] 172.21.0.1 () {52 vars in 1336 bytes} [Sat Mar  9 13:55:23 2019] POST /login/ => generated 0 bytes in 117 msecs (HTTP/1.1 302) 9 headers in 541 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 6/6] 172.21.0.1 () {46 vars in 1247 bytes} [Sat Mar  9 13:55:23 2019] GET /password_change/ => generated 1880 bytes in 40 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 7/7] 172.21.0.1 () {44 vars in 1185 bytes} [Sat Mar  9 13:55:44 2019] GET /logout/ => generated 0 bytes in 16 msecs (HTTP/1.1 302) 7 headers in 317 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 8/8] 172.21.0.1 () {44 vars in 1139 bytes} [Sat Mar  9 13:55:44 2019] GET /login/ => generated 1378 bytes in 26 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 9/9] 172.21.0.1 () {52 vars in 1313 bytes} [Sat Mar  9 13:55:48 2019] POST /login/ => generated 0 bytes in 88 msecs (HTTP/1.1 302) 9 headers in 525 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 10/10] 172.21.0.1 () {46 vars in 1192 bytes} [Sat Mar  9 13:55:48 2019] GET / => generated 894 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 11/11] 172.21.0.1 () {42 vars in 1147 bytes} [Sat Mar  9 13:55:51 2019] GET /password_change => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 122 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 12/12] 172.21.0.1 () {42 vars in 1149 bytes} [Sat Mar  9 13:55:51 2019] GET /password_change/ => generated 1880 bytes in 26 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 13/13] 172.21.0.1 () {52 vars in 1387 bytes} [Sat Mar  9 13:56:29 2019] POST /password_change/ => generated 0 bytes in 223 msecs (HTTP/1.1 302) 6 headers in 289 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 14/14] 172.21.0.1 () {46 vars in 1244 bytes} [Sat Mar  9 13:56:30 2019] GET /password_change/done/ => generated 907 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 15/15] 172.21.0.1 () {44 vars in 1190 bytes} [Sat Mar  9 13:56:36 2019] GET /logout/ => generated 0 bytes in 10 msecs (HTTP/1.1 302) 7 headers in 317 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 16/16] 172.21.0.1 () {44 vars in 1144 bytes} [Sat Mar  9 13:56:36 2019] GET /login/ => generated 1378 bytes in 23 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 17/17] 172.21.0.1 () {52 vars in 1313 bytes} [Sat Mar  9 13:56:42 2019] POST /login/ => generated 0 bytes in 85 msecs (HTTP/1.1 302) 9 headers in 525 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 18/18] 172.21.0.1 () {46 vars in 1192 bytes} [Sat Mar  9 13:56:42 2019] GET / => generated 894 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 19/19] 172.21.0.1 () {42 vars in 1149 bytes} [Sat Mar  9 13:56:52 2019] GET /password_change/ => generated 1880 bytes in 34 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 20/20] 172.21.0.1 () {52 vars in 1387 bytes} [Sat Mar  9 13:57:02 2019] POST /password_change/ => generated 1963 bytes in 107 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 21/21] 172.21.0.1 () {52 vars in 1387 bytes} [Sat Mar  9 13:57:19 2019] POST /password_change/ => generated 1958 bytes in 105 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 22/22] 172.21.0.1 () {52 vars in 1387 bytes} [Sat Mar  9 13:57:43 2019] POST /password_change/ => generated 1963 bytes in 104 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 23/23] 172.21.0.1 () {44 vars in 1221 bytes} [Sat Mar  9 13:57:57 2019] GET /admin/auth/user/1/change/ => generated 13635 bytes in 92 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 24/24] 172.21.0.1 () {42 vars in 1089 bytes} [Sat Mar  9 13:57:57 2019] GET /admin/jsi18n/ => generated 3185 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 25/25] 172.21.0.1 () {44 vars in 1234 bytes} [Sat Mar  9 13:58:03 2019] GET /admin/auth/user/1/password/ => generated 3216 bytes in 38 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 26/26] 172.21.0.1 () {42 vars in 1091 bytes} [Sat Mar  9 13:58:03 2019] GET /admin/jsi18n/ => generated 3185 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 27/27] 172.21.0.1 () {52 vars in 1420 bytes} [Sat Mar  9 13:58:10 2019] POST /admin/auth/user/1/password/ => generated 3370 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 28/28] 172.21.0.1 () {42 vars in 1091 bytes} [Sat Mar  9 13:58:10 2019] GET /admin/jsi18n/ => generated 3185 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 29/29] 172.21.0.1 () {44 vars in 1234 bytes} [Sat Mar  9 13:58:16 2019] GET /admin/auth/user/1/password/ => generated 3216 bytes in 29 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 30/30] 172.21.0.1 () {44 vars in 1221 bytes} [Sat Mar  9 13:58:17 2019] GET /admin/auth/user/1/change/ => generated 13635 bytes in 85 msecs (HTTP/1.1 200) 7 headers in 382 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 31/31] 172.21.0.1 () {52 vars in 1486 bytes} [Sat Mar  9 13:58:25 2019] POST /admin/auth/user/1/change/ => generated 0 bytes in 74 msecs (HTTP/1.1 302) 8 headers in 477 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 32/32] 172.21.0.1 () {46 vars in 1433 bytes} [Sat Mar  9 13:58:25 2019] GET /admin/auth/user/ => generated 6823 bytes in 125 msecs (HTTP/1.1 200) 8 headers in 465 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 33/33] 172.21.0.1 () {42 vars in 1080 bytes} [Sat Mar  9 13:58:25 2019] GET /admin/jsi18n/ => generated 3185 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 34/34] 172.21.0.1 () {52 vars in 1387 bytes} [Sat Mar  9 13:58:32 2019] POST /password_change/ => generated 0 bytes in 169 msecs (HTTP/1.1 302) 6 headers in 289 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 35/35] 172.21.0.1 () {46 vars in 1244 bytes} [Sat Mar  9 13:58:32 2019] GET /password_change/done/ => generated 905 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 36/36] 172.21.0.1 () {44 vars in 1190 bytes} [Sat Mar  9 13:58:35 2019] GET /logout/ => generated 0 bytes in 12 msecs (HTTP/1.1 302) 7 headers in 317 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 37/37] 172.21.0.1 () {44 vars in 1144 bytes} [Sat Mar  9 13:58:35 2019] GET /login/ => generated 1378 bytes in 17 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 38/38] 172.21.0.1 () {52 vars in 1313 bytes} [Sat Mar  9 13:58:39 2019] POST /login/ => generated 0 bytes in 86 msecs (HTTP/1.1 302) 9 headers in 525 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 39/39] 172.21.0.1 () {46 vars in 1192 bytes} [Sat Mar  9 13:58:39 2019] GET / => generated 892 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 13:59:03 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55df7e8205c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55df7e8205c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 17, cores: 1)
+Python auto-reloader enabled
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 21:11:42 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55bfa69e6620
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55bfa69e6620 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 21:31:15 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x560e30fd15c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+Traceback (most recent call last):
+  File "./homeworker/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/usr/lib/python3.6/site-packages/django/conf/__init__.py", line 56, in __getattr__
+    self._setup(name)
+  File "/usr/lib/python3.6/site-packages/django/conf/__init__.py", line 43, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/usr/lib/python3.6/site-packages/django/conf/__init__.py", line 106, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./homeworker/settings_release.py", line 1, in <module>
+    from .settings import *
+  File "./homeworker/settings.py", line 14, in <module>
+    from .user_info import *
+ModuleNotFoundError: No module named 'homeworker.user_info'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+Traceback (most recent call last):
+  File "/app/homeworker/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/lib/python3.6/site-packages/django/__init__.py", line 19, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/usr/lib/python3.6/site-packages/django/conf/__init__.py", line 56, in __getattr__
+    self._setup(name)
+  File "/usr/lib/python3.6/site-packages/django/conf/__init__.py", line 43, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/usr/lib/python3.6/site-packages/django/conf/__init__.py", line 106, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./homeworker/settings_release.py", line 1, in <module>
+    from .settings import *
+  File "./homeworker/settings.py", line 14, in <module>
+    from .user_info import *
+ModuleNotFoundError: No module named 'homeworker.user_info'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 10, cores: 1)
+Python auto-reloader enabled
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/1] 172.21.0.1 () {44 vars in 764 bytes} [Sat Mar  9 21:36:03 2019] GET / => generated 21 bytes in 3 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/2] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:36:03 2019] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/3] 172.21.0.1 () {44 vars in 764 bytes} [Sat Mar  9 21:50:00 2019] GET / => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/4] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:50:00 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/5] 172.21.0.1 () {44 vars in 764 bytes} [Sat Mar  9 21:50:00 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/6] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:50:00 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/7] 172.21.0.1 () {44 vars in 764 bytes} [Sat Mar  9 21:50:39 2019] GET / => generated 21 bytes in 7 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/8] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:50:39 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/9] 172.21.0.1 () {44 vars in 764 bytes} [Sat Mar  9 21:50:40 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/10] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:50:40 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/11] 172.21.0.1 () {44 vars in 764 bytes} [Sat Mar  9 21:52:02 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/12] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:52:02 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/13] 172.21.0.1 () {44 vars in 764 bytes} [Sat Mar  9 21:52:03 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/14] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:52:03 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/15] 172.21.0.1 () {44 vars in 764 bytes} [Sat Mar  9 21:52:03 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/16] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:52:03 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/17] 172.21.0.1 () {42 vars in 720 bytes} [Sat Mar  9 21:52:07 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/18] 172.21.0.1 () {40 vars in 668 bytes} [Sat Mar  9 21:52:07 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/19] 172.21.0.1 () {42 vars in 720 bytes} [Sat Mar  9 21:52:43 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/20] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:52:44 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/21] 172.21.0.1 () {42 vars in 720 bytes} [Sat Mar  9 21:52:44 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/22] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:52:44 2019] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/23] 172.21.0.1 () {42 vars in 720 bytes} [Sat Mar  9 21:52:54 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/24] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:52:54 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/25] 172.21.0.1 () {42 vars in 720 bytes} [Sat Mar  9 21:52:54 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/26] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:52:54 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/27] 172.21.0.1 () {42 vars in 720 bytes} [Sat Mar  9 21:52:54 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 10|app: -1|req: -1/28] 172.21.0.1 () {44 vars in 721 bytes} [Sat Mar  9 21:52:54 2019] GET /favicon.ico => generated 21 bytes in 1 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Sat Mar  9 21:52:57 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 21:53:30 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55d378104620
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x55d378104620 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 6, cores: 1)
+Python auto-reloader enabled
+[pid: 6|app: 0|req: 1/1] 172.21.0.1 () {42 vars in 720 bytes} [Sat Mar  9 21:53:41 2019] GET / => generated 0 bytes in 722 msecs (HTTP/1.1 302) 5 headers in 150 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 2/2] 172.21.0.1 () {42 vars in 720 bytes} [Sat Mar  9 21:53:42 2019] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 5 headers in 150 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 3/3] 172.21.0.1 () {42 vars in 745 bytes} [Sat Mar  9 21:53:42 2019] GET /login/?next=/ => generated 1449 bytes in 69 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 6|app: 0|req: 4/4] 172.21.0.1 () {42 vars in 770 bytes} [Sat Mar  9 21:53:42 2019] GET /favicon.ico => generated 3641 bytes in 20 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 5/5] 172.21.0.1 () {44 vars in 834 bytes} [Sat Mar  9 21:53:43 2019] GET /login/?next=/ => generated 1449 bytes in 59 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 6/6] 172.21.0.1 () {44 vars in 834 bytes} [Sat Mar  9 21:53:44 2019] GET /login/?next=/ => generated 1449 bytes in 91 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 7/7] 172.21.0.1 () {44 vars in 834 bytes} [Sat Mar  9 21:53:44 2019] GET /login/?next=/ => generated 1449 bytes in 27 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 8/8] 172.21.0.1 () {44 vars in 834 bytes} [Sat Mar  9 21:53:45 2019] GET /login/?next=/ => generated 1449 bytes in 24 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 9/9] 172.21.0.1 () {42 vars in 790 bytes} [Sat Mar  9 21:53:47 2019] GET /login/ => generated 1448 bytes in 28 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 10/10] 172.21.0.1 () {52 vars in 1018 bytes} [Sat Mar  9 21:53:50 2019] POST /login/ => generated 0 bytes in 669 msecs (HTTP/1.1 302) 9 headers in 525 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 11/11] 172.21.0.1 () {46 vars in 897 bytes} [Sat Mar  9 21:53:50 2019] GET / => generated 892 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 6)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 21:54:04 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55bf0c8f25c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55bf0c8f25c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 21:54:09 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55cbb04dc5c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55cbb04dc5c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 10, cores: 1)
+Python auto-reloader enabled
+[pid: 10|app: 0|req: 1/1] 172.21.0.1 () {44 vars in 874 bytes} [Sat Mar  9 21:54:11 2019] GET /logout/ => generated 0 bytes in 63 msecs (HTTP/1.1 302) 7 headers in 317 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 2/2] 172.21.0.1 () {44 vars in 828 bytes} [Sat Mar  9 21:54:11 2019] GET /login/ => generated 1448 bytes in 29 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 3/3] 172.21.0.1 () {44 vars in 852 bytes} [Sat Mar  9 21:54:13 2019] GET /password_reset/ => generated 912 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 4/4] 172.21.0.1 () {52 vars in 1045 bytes} [Sat Mar  9 21:54:21 2019] POST /password_reset/ => generated 0 bytes in 30 msecs (HTTP/1.1 302) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 5/5] 172.21.0.1 () {46 vars in 902 bytes} [Sat Mar  9 21:54:21 2019] GET /password_reset/done/ => generated 670 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 21:54:53 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55ee26d665c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55ee26d665c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 12, cores: 1)
+Python auto-reloader enabled
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 22:09:28 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55e634387620
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55e634387620 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 6, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 6)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 22:09:57 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55ed9aca65c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55ed9aca65c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 22:10:05 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55d0e98ad5c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55d0e98ad5c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 10, cores: 1)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 10)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 22:10:10 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55a843a2e5c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55a843a2e5c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 12, cores: 1)
+Python auto-reloader enabled
+[pid: 12|app: 0|req: 1/1] 172.21.0.1 () {52 vars in 1045 bytes} [Sat Mar  9 22:10:23 2019] POST /password_reset/ => generated 0 bytes in 84 msecs (HTTP/1.1 302) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 2/2] 172.21.0.1 () {46 vars in 902 bytes} [Sat Mar  9 22:10:23 2019] GET /password_reset/done/ => generated 670 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 3/3] 172.21.0.1 () {44 vars in 848 bytes} [Sat Mar  9 22:10:58 2019] GET /login/ => generated 1448 bytes in 23 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 4/4] 172.21.0.1 () {44 vars in 852 bytes} [Sat Mar  9 22:10:59 2019] GET /password_reset/ => generated 912 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 5/5] 172.21.0.1 () {52 vars in 1045 bytes} [Sat Mar  9 22:11:02 2019] POST /password_reset/ => generated 0 bytes in 18 msecs (HTTP/1.1 302) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 6/6] 172.21.0.1 () {46 vars in 902 bytes} [Sat Mar  9 22:11:02 2019] GET /password_reset/done/ => generated 670 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./homeworker/settings.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 12)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 22:12:01 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x56301234e5c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56301234e5c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 14, cores: 1)
+Python auto-reloader enabled
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 22:12:09 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55d7572b55c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55d7572b55c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 16, cores: 1)
+Python auto-reloader enabled
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 22:27:42 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55ba4a489620
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55ba4a489620 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 6, cores: 1)
+Python auto-reloader enabled
+[pid: 6|app: 0|req: 1/1] 172.21.0.1 () {52 vars in 1018 bytes} [Sat Mar  9 22:28:04 2019] POST /login/ => generated 0 bytes in 175 msecs (HTTP/1.1 302) 9 headers in 541 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 2/2] 172.21.0.1 () {46 vars in 929 bytes} [Sat Mar  9 22:28:04 2019] GET /password_change/ => generated 1878 bytes in 55 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 3/3] 172.21.0.1 () {44 vars in 890 bytes} [Sat Mar  9 22:29:06 2019] GET /logout/ => generated 0 bytes in 9 msecs (HTTP/1.1 302) 7 headers in 317 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 4/4] 172.21.0.1 () {44 vars in 844 bytes} [Sat Mar  9 22:29:06 2019] GET /login/ => generated 1448 bytes in 32 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 5/5] 172.21.0.1 () {44 vars in 852 bytes} [Sat Mar  9 22:29:07 2019] GET /password_reset/ => generated 912 bytes in 13 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 6/6] 172.21.0.1 () {52 vars in 1045 bytes} [Sat Mar  9 22:29:10 2019] POST /password_reset/ => generated 0 bytes in 15 msecs (HTTP/1.1 302) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 7/7] 172.21.0.1 () {46 vars in 902 bytes} [Sat Mar  9 22:29:10 2019] GET /password_reset/done/ => generated 670 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+Not Found: /reset
+[pid: 6|app: 0|req: 8/8] 172.21.0.1 () {42 vars in 788 bytes} [Sat Mar  9 22:32:50 2019] GET /reset => generated 3623 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 9/9] 172.21.0.1 () {42 vars in 798 bytes} [Sat Mar  9 22:33:03 2019] GET /reset/done => generated 0 bytes in 4 msecs (HTTP/1.1 301) 3 headers in 117 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 10/10] 172.21.0.1 () {42 vars in 800 bytes} [Sat Mar  9 22:33:03 2019] GET /reset/done/ => generated 564 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 11/11] 172.21.0.1 () {42 vars in 808 bytes} [Sat Mar  9 22:33:13 2019] GET /password_reset/ => generated 912 bytes in 18 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 12/12] 172.21.0.1 () {52 vars in 1045 bytes} [Sat Mar  9 22:33:18 2019] POST /password_reset/ => generated 0 bytes in 13 msecs (HTTP/1.1 302) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 6|app: 0|req: 13/13] 172.21.0.1 () {46 vars in 902 bytes} [Sat Mar  9 22:33:18 2019] GET /password_reset/done/ => generated 670 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 123 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 22:33:37 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55b2a8f445c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55b2a8f445c0 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+Python auto-reloader enabled

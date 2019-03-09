@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+IS_USER_SETTING_FILE = os.path.exists('setting/user_info.py')
+
+if IS_USER_SETTING_FILE:
+    from setting import user_info
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -31,6 +36,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # myapp
+    'account.apps.AccountConfig',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,3 +126,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'login'
+
+# Email Settings
+if IS_USER_SETTING_FILE:
+    email_info = user_info.EMAIL_INFO
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = email_info.host_user
+    EMAIL_HOST_PASSWORD = email_info.host_password
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
