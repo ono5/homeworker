@@ -1,0 +1,107 @@
+version: '2.4'
+
+volumes:
+  public:
+    driver: local
+
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: test
+  release:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DJANGO_SETTINGS_MODULE: homeworker.settings_release
+      DB_HOST: db
+      DB_NAME: app
+      DB_USER: postgres
+      DB_PASS: supersecretpassword
+  app:
+    extends:
+      service: release
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - public:/public
+      - ./src:/app
+    expose:
+      - "8001"
+    command: uwsgi --ini /app/homeworker/django.ini
+    links:
+      - hub
+  migrate:
+    extends:
+      service: release
+    depends_on:
+      db:
+        condition: service_healthy
+    command:
+      - python3
+      - manage.py
+      - migrate
+      - --no-input
+  db:
+    image: postgres:10-alpine
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=supersecretpassword
+
+  adm:
+    image: dpage/pgadmin4
+    volumes:
+     - ./pgadmin:/var/lib/pgadmin/storage
+    ports:
+      - "8002:80"
+      - "4433:443"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "qes"
+      PGADMIN_DEFAULT_PASSWORD: "q"
+
+  selenium:
+    image: elgalu/selenium
+
+  hub:
+    image: dosel/zalenium
+    ports:
+      - "4444:4444"
+    tty: true
+    volumes:
+      - /tmp/videos:/home/seluser/videos
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: >
+      start --desiredContainers 4
+            --maxDockerSeleniumContainers 8
+            --screenWidth 800 --screenHeight 600
+            --timeZone "Europe/Berlin"
+            --videoRecordingEnabled true
+            --sauceLabsEnabled false
+            --browserStackEnabled false
+            --testingBotEnabled false
+            --startTunnel false
+
+  nginx:
+    image: nginx:1.15.9-alpine
+    ports:
+      - "8000:8000"
+    volumes:
+    - public:/public
+    - ./nginx/conf:/etc/nginx/conf.d
+    - ./nginx/uwsgi_params:/etc/nginx/uwsgi_params
+    - ./nginx/log:/var/log/nginx
+    depends_on:
+      - app
+
+  redis:
+    image: redis:3.0
+

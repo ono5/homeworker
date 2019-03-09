@@ -1,0 +1,95 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 12:43:15 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: f8daa201b579
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55792434a580
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55792434a580 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 6, cores: 1)
+Python auto-reloader enabled
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/bin/uwsgi
+[uWSGI] getting INI configuration from /app/homeworker/django.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 12:45:25 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: f8daa201b579
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55c335918540
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c335918540 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+Python auto-reloader enabled
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Mar  9 12:45:35 2019] ***
+compiled with version: 8.2.0 on 09 March 2019 12:39:44
+os: Linux-4.9.125-linuxkit #1 SMP Fri Sep 7 08:20:28 UTC 2018
+nodename: d959444fc8a4
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /app
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.8 (default, Jan 24 2019, 16:36:30)  [GCC 8.2.0]
+Python main interpreter initialized at 0x563058101620
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x563058101620 pid: 1 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 6, cores: 1)
+Python auto-reloader enabled
+[pid: 6|app: 0|req: 1/1] 172.21.0.1 () {42 vars in 1073 bytes} [Sat Mar  9 12:46:04 2019] GET / => generated 16559 bytes in 205 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 6|app: 0|req: 2/2] 172.21.0.1 () {42 vars in 1052 bytes} [Sat Mar  9 12:46:04 2019] GET /favicon.ico => generated 1976 bytes in 12 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
