@@ -1,17 +1,21 @@
 from django import forms
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import AuthenticationForm
 
 
-class LoginForm(forms.Form):
-    """Authenticate users against the database"""
+class CustomLoginForm(AuthenticationForm):
+    """Lgin Form"""
 
-    username = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.widget.attrs['class'] = 'auth-box'
 
 
 class UserRegistrationForm(forms.ModelForm):
-    password = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput)
+
+    password = forms.CharField(label='Password', widget=forms.PasswordInput())
+    password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput())
 
     class Meta:
         model = User

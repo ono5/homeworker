@@ -27,8 +27,10 @@ clean:
 	docker-compose down -v
 	docker images -q -f dangling=true -f label=application=homeworker | xargs -I ARGS docker rmi -f --no-prune ARGS
 
-
 flash:
 	docker-compose run --rm app python3 manage.py flush --database=default --noinput
 	docker-compose run --rm app python3 manage.py createsuperuser
+
+cs:
+	docker-compose run --rm app python3 manage.py collectstatic --no-input
 
