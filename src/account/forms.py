@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
 
 
 class CustomLoginForm(AuthenticationForm):
@@ -12,15 +12,34 @@ class CustomLoginForm(AuthenticationForm):
             field.widget.attrs['class'] = 'auth-box'
 
 
+class CustomPasswordResetForm(PasswordResetForm):
+    """Password Reset Form"""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.widget.attrs['class'] = 'auth-box'
+            field.widget.attrs['placeholder'] = 'email@example.com'
+
+
 class UserRegistrationForm(forms.ModelForm):
 
-    password = forms.CharField(label='Password', widget=forms.PasswordInput())
-    password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput())
+    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'username'}))
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'firstname'}))
+    email = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'email@example.com'}))
+
+    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'placeholder': 'password'}))
+    password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput(attrs={'placeholder': 'confirm_password'}))
 
     class Meta:
         model = User
         # if the user chooses a username that already exists, they will get a validation error
         fields = ('username', 'first_name', 'email')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.widget.attrs['class'] = 'auth-box'
 
     def clean_password2(self):
         """

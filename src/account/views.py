@@ -1,11 +1,19 @@
 from django.shortcuts import render
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, \
+    PasswordResetView, \
+    PasswordResetConfirmView
 from django.contrib.auth.decorators import login_required
-from .forms import UserRegistrationForm, CustomLoginForm
+from .forms import UserRegistrationForm, \
+    CustomLoginForm, \
+    CustomPasswordResetForm
 
 
 class Login(LoginView):
     form_class = CustomLoginForm
+
+
+class PasswordReset(PasswordResetView):
+    form_class = CustomPasswordResetForm
 
 
 @login_required

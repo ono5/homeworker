@@ -1,8 +1,21 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}Welcome{% endblock %}
 
+{% block custom_static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/account.css' %}" >
+{% endblock %}
+
+
 {% block content %}
-    <h1>Welcome {{ new_user.first_name }}!</h1>
-    <p>Your account has been successfully created. Now you can <a href="{% url 'login' %}">log in</a>.</p>
+<div class="content_box">
+    <div class="card">
+        <div class="card-body">
+            <h1>Welcome {{ new_user.first_name }}!</h1>
+            <p>Your account has been successfully created. Now you can <a href="{% url 'login' %}">log in</a>.</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
