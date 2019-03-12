@@ -15,10 +15,7 @@
         </div>
         <div class="card-body">
             {% if form.errors %}
-                <div id="id_error">
-                    Your username and password didn't match.
-                    Please try again.
-                </div>
+                <div id="id_error" class="set_error">Your username and password didn't match. Please try again.</div>
             {% endif %}
             <div class="login-form">
                 <form action="{% url 'login' %}" method="post" novalidate>

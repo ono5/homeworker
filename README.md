@@ -8,6 +8,7 @@ such as ...
 * Create Todo List
 
 # ● Dev Environment
+* Mac on PC
 * Docker version 18.09.1
 * docker-compose version 1.23.2
 * Python3
@@ -15,11 +16,11 @@ such as ...
 * Postgres
 * redis
 
-# ● Execute My App
+# ● Set up  My App on your environment
 
 ```bash
-make test
-make release
+1. make test
+2. make release
 ```
 
 # ● About Email Setting
@@ -32,3 +33,20 @@ To send email, you need the below settins.
 
 In addition, you need gmail account because this app is specified with gmail server to send email.
 
+# ● Let's Browsing Test!
+You can test for browsing test with selenium (ZALENIUM) easily.
+
+First, you open browser at 'http://localhost:4444/grid/admin/live'.  
+Second, you type the below command.
+
+```bash
+make test
+exit  
+make release
+```
+
+Finally, you type the below command.
+
+```bash
+make ft
+```

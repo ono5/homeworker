@@ -14,10 +14,13 @@ all_tests:
 	docker-compose run --rm app pytest
 
 ft:
-	docker-compose run --rm app pytest -v -s -l --tb=short functional_tests/${filename}
+	docker-compose run --rm app pytest -v -s -l --tb=short acceptance/${filename}
 
 ut:
 	docker-compose run --rm app pytest -v -s -l --tb=short ${dir}
+
+flake8:
+	docker-compose run --rm app pytest --flake8
 
 mk:
 	docker-compose run --rm app python3 manage.py makemigrations

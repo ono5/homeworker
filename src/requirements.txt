@@ -9,3 +9,4 @@ psycopg2-binary
 pytest-django
 selenium
 django-redis
+pytest-flake8
