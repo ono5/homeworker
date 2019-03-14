@@ -23,8 +23,8 @@ flake8:
 	docker-compose run --rm app pytest --flake8
 
 mk:
-	docker-compose run --rm app python3 manage.py makemigrations
-	docker-compose run --rm app python3 manage.py migrate ${app_name}
+	docker-compose run --rm app python3 manage.py makemigrations ${app_name}
+	docker-compose run --rm app python3 manage.py migrate
 
 clean:
 	docker-compose down -v
@@ -37,3 +37,5 @@ flash:
 cs:
 	docker-compose run --rm app python3 manage.py collectstatic --no-input
 
+startapp:
+	docker-compose run --rm app python3 manage.py startapp ${app_name}
