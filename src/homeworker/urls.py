@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('account.urls')),
     path('blog_api/v1/', include('blog.urls')),
+    path('api-auth', include('rest_framework.urls')),
 ]
 
 if settings.DEBUG:
