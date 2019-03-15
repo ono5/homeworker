@@ -62,9 +62,16 @@ MIDDLEWARE = [
 ]
 
 # https://www.django-rest-framework.org/api-guide/settings/
+"""
+* AllowAny - any user, authenticated or not, has full access
+* IsAUthenticated - only authenticated, registered users have access
+* IsAdminUser - only admins/superusers have access
+* Is AuthenticatedOrReadOnly - unauthorized users can view any page, 
+  but only authenticated users have write, edit, or delete privileges
+"""
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ]
 }
 
