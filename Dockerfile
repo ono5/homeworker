@@ -5,6 +5,9 @@
 FROM alpine AS test
 LABEL application=homeworker
 
+# バッファを作らない設定
+ENV PYTHONUNBUFFERED 1
+
 # Install basic utilities
 # apk -> Alpine Linux の package manager
 # キャッシュさせないように --no-cache を指定
@@ -50,6 +53,9 @@ LABEL application=homeworker
 # Install operating system dependencies
 # Test stage で、プリコンパイルした環境を再利用するので、xxxx-dev 環境は不要
 RUN apk add --no-cache python3 postgresql-client bash
+
+# バッファを作らない設定
+ENV PYTHONUNBUFFERED 1
 
 # Create app user
 # Group ID 1000 のグループを作成
