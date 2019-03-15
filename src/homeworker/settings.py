@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     # Local
     'account.apps.AccountConfig',
     'blog.apps.BlogConfig',
+
+    # 3rd-party apps
+    'rest_framework',
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,6 +60,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# https://www.django-rest-framework.org/api-guide/settings/
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 ROOT_URLCONF = 'homeworker.urls'
 
