@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # Local
     'account.apps.AccountConfig',
     'blog.apps.BlogConfig',
+    'kakeibo.apps.KakeiboConfig',
 
     # 3rd-party apps
     'rest_framework',

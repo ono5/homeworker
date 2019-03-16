@@ -24,6 +24,7 @@ urlpatterns = [
     path('blog_api/v1/', include('blog.urls')),
     path('api-auth', include('rest_framework.urls')),
     path('blog_api/v1/rest-auth/', include('rest_auth.urls')),
+    path('kakeibo/', include('kakeibo.urls')),
 ]
 
 if settings.DEBUG:

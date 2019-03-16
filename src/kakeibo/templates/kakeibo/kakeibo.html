@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}kakeibo{% endblock %}
+{% block custom_static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/kakeibo.css' %}" >
+{% endblock %}
+
+{% block content %}
+    Welcome To Kakeibo!
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'js/kakeibo.js' %}"></script>
+{% endblock custom_js %}
