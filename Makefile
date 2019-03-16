@@ -39,3 +39,9 @@ cs:
 
 startapp:
 	docker-compose run --rm app python3 manage.py startapp ${app_name}
+
+superuser:
+	docker-compose run --rm app python3 manage.py createsuperuser
+
+docker_clean:
+	docker rm '$$(docker ps -a -q)'
