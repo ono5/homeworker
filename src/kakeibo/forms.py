@@ -18,11 +18,11 @@ class KakeiboInputForm(forms.ModelForm):
                 'class': 'custom-select'
             } ),
             'credit': forms.fields.TextInput(attrs={
-                'placeholder': 'Enter a credit for item',
+                'placeholder': 'Enter a credit',
                 'class': 'form-control input-lg'
             }),
             'item': forms.fields.TextInput(attrs={
-                'placeholder': 'Enter a credit for item',
+                'placeholder': 'Enter purchase item',
                 'class': 'form-control input-lg'
             })
         }

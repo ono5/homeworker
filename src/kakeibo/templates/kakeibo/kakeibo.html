@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="col-md-12 col-md-offset-3 jumbotron">
+    <div class="col-md-12 col-md-offset-3 calc jumbotron">
         <div class="text-center">
             {% if messages %}
                 <ul class="messages">
@@ -21,8 +21,8 @@
                     {% endfor %}
                 </ul>
             {% endif %}
-            <h1>Input Credit for your Item!</h1>
-            <form action="#" method="POST" novalidate>
+            <h1>KAKEIBO</h1>
+            <form action="#" method="POST" class="form-area" snovalidate>
                 {{form.category}}
                 {{form.item}}
                 {{form.credit}}
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                 {% endif %}
-                <input type="submit" value="INPUT CREDIT" class="auth-box btn btn-primary input-lg" id="id_submit">
+                <input type="submit" value="INPUT CREDIT" class="auth-box btn btn-primary col-md-12 input-lg " id="id_submit">
             </form>
         </div>
     </div>

@@ -4,7 +4,6 @@ from .forms import KakeiboInputForm
 
 
 def kakeibo_page(request):
-
     if request.method == 'POST':
         user = request.user
 
