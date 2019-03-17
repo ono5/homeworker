@@ -73,8 +73,14 @@ body {
     line-height: 50px;
 }
 
+.logo {
+    width: 100px;
+    float: left;
+}
+
 .my_custom_menu {
     text-align: right !important;
+width: 900px;
 }
 
 .my_custom_menu ul li {

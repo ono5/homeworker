@@ -38,7 +38,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # Local
     'account.apps.AccountConfig',
-    'blog.apps.BlogConfig',
     'kakeibo.apps.KakeiboConfig',
 
     'django.contrib.admin',
