@@ -7,7 +7,37 @@
 {% endblock %}
 
 {% block content %}
-    Welcome To Kakeibo!
+    <div class="col-md-12 col-md-offset-3 jumbotron">
+        <div class="text-center">
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li {% if message.tags  == "error" %} class="alert alert-danger" {% else %} class="alert alert-success"  {% endif %} role="alert">
+                            {{ message|safe }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <h1>Input Credit for your Item!</h1>
+            <form action="#" method="POST" novalidate>
+                {{form.category}}
+                {{form.item}}
+                {{form.credit}}
+                {% csrf_token %}
+                {% if form.errors %}
+                    <div class="form-group has-error">
+                        <div class="help-block">
+                            {{ form.text.errors }}
+                        </div>
+                    </div>
+                {% endif %}
+                <input type="submit" value="INPUT CREDIT" class="auth-box btn btn-primary input-lg" id="id_submit">
+            </form>
+        </div>
+    </div>
 {% endblock %}
 
 {% block custom_js %}
