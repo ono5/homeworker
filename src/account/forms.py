@@ -24,12 +24,11 @@ class CustomPasswordResetForm(PasswordResetForm):
 
 class UserRegistrationForm(forms.ModelForm):
 
-    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'username'}))
-    first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'firstname'}))
-    email = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'email@example.com'}))
-
-    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'placeholder': 'password'}))
-    password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput(attrs={'placeholder': 'confirm_password'}))
+    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'USERNAME'}))
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'FIRSTNAME'}))
+    email = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'EMAIL@EXAMPLE.COM'}))
+    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'placeholder': 'PASSWORD'}))
+    password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput(attrs={'placeholder': 'CONFIRM_PASSWORD'}))
 
     class Meta:
         model = User
@@ -39,7 +38,7 @@ class UserRegistrationForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
-            field.widget.attrs['class'] = 'auth-box'
+            field.widget.attrs['class'] = 'form-input'
 
     def clean_password2(self):
         """

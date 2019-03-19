@@ -5,30 +5,79 @@
 {% block title %}Create an account{% endblock %}
 
 {% block custom_static%}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/account.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}" >
+    <style>
+        .register-container {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to top, rgba(0, 0, 0, .4), rgba(0, 0, 0, .2)),url('{% static "media/bg1.jpeg" %}') center no-repeat;
+            background-size: cover;
+        }
+        .header {
+            width: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, .4), rgba(0, 0, 0, .2)),url('{% static "media/bg2.jpeg" %}') center no-repeat;
+            background-size: cover;
+            box-shadow: -10 0 30px rgba(0, 0, 0, .3);
+            position: relative;
+        }
+
+        .header h1 {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+    </style>
 {% endblock %}
 
 
 {% block content %}
-<div class="content_box register_box">
-    <div class="card">
-        <div class="card-header">
-            <h1>Create an account</h1>
-        </div>
-        <div class="card-body register-body">
-            <p>Please, sign up using the following form:</p>
-            <form action="." method="post" novalidate>
-                {{ user_form.username }}
-                {{ user_form.first_name }}
-                {{ user_form.email }}
-                {{ user_form.password }}
-                {{ user_form.password2 }}
-                {% csrf_token %}
-            <div class="card-footer">
-                <div><input type="submit" value="Create my account" class="auth-box" id="id_submit"></div>
-            </div>
-            </form>
-        </div>
+<div class="register-container">
+<div class="banner">
+    <h1 class=banner-heading>Register here</h1>
+    <div class="arrow"><i class="fas fa-arrow-down"></i></div>
+    <button class="banner-btn">Click Now</button>
+</div>
+
+<div class="form-container">
+    <form class="sign-up-form" action="." method="post" novalidate>
+        {{ user_form.username }}
+        {{ user_form.first_name }}
+        {{ user_form.email }}
+        {{ user_form.password }}
+        {{ user_form.password2 }}
+        {% csrf_token %}
+        <p>Get News?</p>
+        <label>No</label>
+        <input type="checkbox">
+        <label>Yes</label>
+        <button type="submit" id="id_submit">Sign Up Here</button>
+    </form>
+    <div class="header">
+        <h1>Welcome to Home Worker!</h1>
     </div>
+    <div class="x-btn">&#10005;</div>
+</div>
 </div>
 {% endblock %}
+
+{% block custom_js %}
+    <script>
+        document.querySelector('.banner-btn').addEventListener('click', () => {
+            document.querySelector('.banner').style.display = 'none';
+            document.querySelector('.form-container').style.cssText = 'opacity: 1; visibility: visible';
+            document.querySelector('.register-container').style.cssText = 'background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url({% static "media/bg2.jpeg" %}) center no-repeat; background-size: cover';
+        });
+
+        document.querySelector('.x-btn').addEventListener('click', () => {
+            document.querySelector('.banner').style.display = 'flex';
+            document.querySelector('.form-container').style.cssText = 'opacity: 0; visibility: hidden';
+            document.querySelector('.register-container').style.cssText = 'background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)), url({% static "media/bg1.jpeg" %}) center no-repeat; background-size: cover';
+        });
+    </script>
+{% endblock custom_js %}
