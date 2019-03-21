@@ -16,12 +16,12 @@
       <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
+
     <div class="my_navbar">
         <div class="container-fluid navbar-fixed-top my_top_navbar_div">
             {% include 'top-navbar.html' %}
         </div>
     </div>
-
     {% block content %}
     {% endblock %}
 
