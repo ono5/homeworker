@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from django.utils.translation import gettext_lazy as _
+
 
 IS_USER_SETTING_FILE = os.path.exists('setting/user_info.py')
 
@@ -39,7 +41,6 @@ INSTALLED_APPS = [
     # Local
     'account.apps.AccountConfig',
     'kakeibo.apps.KakeiboConfig',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -130,7 +132,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
 TIME_ZONE = 'UTC'
 
@@ -166,3 +169,14 @@ if IS_USER_SETTING_FILE:
     EMAIL_USE_TLS = True
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Translate Language
+LANGAGES = (
+    ('en', _('ENGLISH')),
+    ('ja', _('JAPANESE')),
+)
+
+# Translation Path
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]

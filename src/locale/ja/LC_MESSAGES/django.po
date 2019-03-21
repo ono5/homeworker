@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-21 20:50+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: account/params.py:4
+msgid "USERNAME"
+msgstr "ユーザー名"
+
+#: account/params.py:5 account/params.py:8
+msgid "PASSWORD"
+msgstr "パスワード"
+
+#: account/params.py:6
+msgid "FIRSTNAME"
+msgstr "名前"
+
+#: account/params.py:7
+msgid "EMAIL@EXAMPLE.COM"
+msgstr "メールアドレス"
+
+#: account/params.py:9
+#, fuzzy
+#| msgid "PASSWORD"
+msgid "CONFIRM_PASSWORD"
+msgstr "パスワード"
+
+#: homeworker/settings.py:175
+msgid "ENGLISH"
+msgstr "英語"
+
+#: homeworker/settings.py:176
+msgid "JAPANESE"
+msgstr "日本語"
+
+#: homeworker/urls.py:24
+msgid "admin/"
+msgstr ""
+
+#: homeworker/urls.py:26
+msgid "kakeibo/"
+msgstr ""
+
+#: templates/top-navbar.html:12
+msgid "Language"
+msgstr ""

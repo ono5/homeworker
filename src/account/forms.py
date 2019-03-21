@@ -2,9 +2,14 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm
 
+from .params import *
+
 
 class CustomLoginForm(AuthenticationForm):
     """Lgin Form"""
+
+    username = forms.CharField(widget=forms.TextInput( attrs={'placeholder': USERNAME}))
+    password = forms.CharField(label='Password', widget=forms.PasswordInput( attrs={'placeholder': PASSWORD}))
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,16 +24,16 @@ class CustomPasswordResetForm(PasswordResetForm):
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
             field.widget.attrs['class'] = 'auth-box'
-            field.widget.attrs['placeholder'] = 'email@example.com'
+            field.widget.attrs['placeholder'] = EMAIL
 
 
 class UserRegistrationForm(forms.ModelForm):
 
-    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'USERNAME'}))
-    first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'FIRSTNAME'}))
-    email = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'EMAIL@EXAMPLE.COM'}))
-    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'placeholder': 'PASSWORD'}))
-    password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput(attrs={'placeholder': 'CONFIRM_PASSWORD'}))
+    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': USERNAME}))
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': FIRSTNAME}))
+    email = forms.CharField(widget=forms.TextInput(attrs={'placeholder': EMAIL}))
+    password = forms.CharField(label=PASSWORD, widget=forms.PasswordInput(attrs={'placeholder': PASSWORD}))
+    password2 = forms.CharField(label=CONFIRM_PASSWORD, widget=forms.PasswordInput(attrs={'placeholder': CONFIRM_PASSWORD}))
 
     class Meta:
         model = User
