@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     # Local
     'account.apps.AccountConfig',
     'kakeibo.apps.KakeiboConfig',
+
+    # 3rd-party
+    'rosetta',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -171,7 +175,7 @@ else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Translate Language
-LANGAGES = (
+LANGUAGES = (
     ('en', _('ENGLISH')),
     ('ja', _('JAPANESE')),
 )
@@ -179,4 +183,5 @@ LANGAGES = (
 # Translation Path
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
+    os.path.join(BASE_DIR, 'kakeibo/locale'),
 ]

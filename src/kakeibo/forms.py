@@ -1,6 +1,7 @@
 from django import forms
 
-from kakeibo.models import Category, Payment
+from .params import *
+from .models import Category, Payment
 
 
 class KakeiboInputForm(forms.ModelForm):
@@ -18,11 +19,11 @@ class KakeiboInputForm(forms.ModelForm):
                 'class': 'custom-select'
             } ),
             'credit': forms.fields.TextInput(attrs={
-                'placeholder': 'Enter a credit',
+                'placeholder': CREDIT,
                 'class': 'form-control input-lg'
             }),
             'item': forms.fields.TextInput(attrs={
-                'placeholder': 'Enter purchase item',
+                'placeholder': ITEM,
                 'class': 'form-control input-lg'
             })
         }

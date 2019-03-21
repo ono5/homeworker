@@ -111,3 +111,19 @@ Django offers the {% trans %} and {% blocktrans %} template tags to translate st
 
 In order to use the translation templates tags, you have to load {% load i18n %} at the top of your template to load them.
 
+# 3rd-Party
+[rosetta](https://django-rosetta.readthedocs.io/en/latest/)
+
+# Output po file the locale dir of each application
+
+1. change dir to target app  
+2. mkdir locale dir and into ja and en dir  
+3. execute "django-admin makemessages --all" command on shell at app dir
+4. add the below setting in settings.py
+
+```bash
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+    os.path.join(BASE_DIR, 'kakeibo/locale'), # target app
+]
+```

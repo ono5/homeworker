@@ -11,3 +11,4 @@ pytest-django
 selenium
 django-redis
 pytest-flake8
+django-rosetta==0.8.1
