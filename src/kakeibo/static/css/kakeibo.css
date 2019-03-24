@@ -1,15 +1,10 @@
 .calc {
-    position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-
+	margin: auto;
 	padding: 15px 30px;
 	background: rgba(0,0,0,0.4);
 	color: #fff;
 	text-align: center;
 	width: 600px;
-	height: 350px;
 }
 
 .form-area input {

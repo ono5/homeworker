@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}kakeibo{% endblock %}
+{% block custom_static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/kakeibo_list.css' %}" >
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12 col-md-offset-3 calc jumbotron">
+        <div class="text-center">
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li {% if message.tags  == "error" %} class="alert alert-danger" {% else %} class="alert alert-success"  {% endif %} role="alert">
+                            {{ message|safe }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <h1>KAKEIBO</h1>
+            <ul>
+                {% for data in data_list %}
+                    <li>{{data}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'js/kakeibo.js' %}"></script>
+{% endblock custom_js %}

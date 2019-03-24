@@ -14,7 +14,7 @@ class Payment(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=False)
     item = models.CharField(max_length=250, blank=False, null=True)
     credit = models.DecimalField(
-        max_digits=6,
+        max_digits=10,
         decimal_places=2,
         blank=False,
         null=True)

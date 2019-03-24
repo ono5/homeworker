@@ -15,7 +15,7 @@ class KakeiboInputForm(forms.ModelForm):
         fields = ('category', 'credit', 'item')
         exclude = ('created_at', 'updated_at')
         widgets = {
-            'category': forms.fields.Select( attrs={
+            'category': forms.fields.Select(attrs={
                 'class': 'custom-select'
             } ),
             'credit': forms.fields.TextInput(attrs={
