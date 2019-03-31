@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Local
     'account.apps.AccountConfig',
     'kakeibo.apps.KakeiboConfig',
+    'blog.apps.BlogConfig',
 
     # 3rd-party
     'rosetta',
