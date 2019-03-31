@@ -8,6 +8,11 @@ class PublishedManager(models.Manager):
         return super(PublishedManager, self).get_queryset().filter(status='published')
 
 
+class DraftedManager(models.Manager):
+    def get_queryset(self):
+        return super(DraftedManager, self).get_queryset().filter(status='draft')
+
+
 class Post(models.Model):
     STATUS_CHOICES = (
         ('draft', 'Draft'),
@@ -27,7 +32,8 @@ class Post(models.Model):
                               choices=STATUS_CHOICES,
                               default='draft')
     objects = models.Manager() # The default manager.
-    published = PublishedManager() # Our custom manager
+    published = PublishedManager() # Our custom manager with publish
+    drafted = DraftedManager() # Our custome manager with draft status
 
     class Meta:
         ordering = ('-publish',)
