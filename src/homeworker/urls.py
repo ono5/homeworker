@@ -24,6 +24,7 @@ urlpatterns = i18n_patterns(
     path(_('admin/'), admin.site.urls),
     path('', include('account.urls')),
     path(_('kakeibo/'), include('kakeibo.urls')),
+    path(_('blog/'), include('blog.urls', namespace='blog')),
 )
 
 if 'rosetta' in settings.INSTALLED_APPS:
