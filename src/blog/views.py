@@ -65,10 +65,13 @@ def post_share(request, post_id):
             print(cd)
             # https://docs.djangoproject.com/en/2.1/ref/request-response/#django.http.HttpRequest.build_absolute_uri
             post_url = request.build_absolute_uri(post.get_absolute_url())
-            subject = '{}({})recommends you reading{}'.format(cd['name'], cd['email'], post.title)
-            message = 'Read "{}" at {} \n\n\'s comments: {}'.format(post.title, post_url, cd['name'], cd['comments'])
+            subject = '{}({})recommends you reading {}'.format(cd['name'], cd['email'], post.title)
+            message = 'Read "{}" at {} \n\n{}\'s comments: {}'.format(post.title,
+                                                                    post_url,
+                                                                    cd['name'],
+                                                                    cd['comments'])
             send_mail(subject, message, 'admin@myblog.com', [cd['to']])
-            send_by_email = True
+            sent_by_email = True
     else:
         form = EmailPostForm()
     return render(request,
